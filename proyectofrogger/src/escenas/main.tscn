@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://bmhb3j1qiq08a"]
+[gd_scene load_steps=3 format=3 uid="uid://bmhb3j1qiq08a"]
+
+[ext_resource type="PackedScene" uid="uid://bu8dvswt1e6f1" path="res://src/escenas/mapa.tscn" id="1_bg8j1"]
+[ext_resource type="PackedScene" uid="uid://ddsybkjqpkpeq" path="res://src/escenas/jugador.tscn" id="2_blyxm"]
 
 [node name="main" type="Node"]
+
+[node name="mapa" parent="." instance=ExtResource("1_bg8j1")]
+
+[node name="jugador" parent="." instance=ExtResource("2_blyxm")]
+position = Vector2(152, 8)
