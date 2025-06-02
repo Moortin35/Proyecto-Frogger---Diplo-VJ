@@ -21,7 +21,7 @@ velocidad = 120
 [node name="linea_obstaculo2" parent="spawner_obstaculo" instance=ExtResource("3_glrbf")]
 position = Vector2(0, 168)
 distancia_entre_obstaculos = 80
-velocidad = 120
+velocidad = -120
 spawn_from_right_side = true
 
 [node name="linea_obstaculo3" parent="spawner_obstaculo" instance=ExtResource("3_glrbf")]
