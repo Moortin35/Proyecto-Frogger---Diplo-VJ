@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmhb3j1qiq08a"]
+[gd_scene load_steps=4 format=3 uid="uid://bmhb3j1qiq08a"]
 
 [ext_resource type="PackedScene" uid="uid://bu8dvswt1e6f1" path="res://src/escenas/mapa.tscn" id="1_bg8j1"]
 [ext_resource type="PackedScene" uid="uid://ddsybkjqpkpeq" path="res://src/escenas/jugador.tscn" id="2_blyxm"]
+[ext_resource type="PackedScene" uid="uid://diw3velfvip4s" path="res://src/escenas/linea_obstaculo.tscn" id="3_glrbf"]
 
 [node name="main" type="Node"]
 
 [node name="mapa" parent="." instance=ExtResource("1_bg8j1")]
 
 [node name="jugador" parent="." instance=ExtResource("2_blyxm")]
-position = Vector2(152, 8)
+position = Vector2(152, 200)
+
+[node name="spawner_obstaculo" type="Node" parent="."]
+
+[node name="linea_obstaculo" parent="spawner_obstaculo" instance=ExtResource("3_glrbf")]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch3jlvdhwoy7a"]
+
+[ext_resource type="Texture2D" uid="uid://thrsa8v2s3kx" path="res://_assets/tileset_map.png" id="1_sxijj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxijj"]
+size = Vector2(12, 12)
+
+[node name="obstaculo" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sxijj")
+region_enabled = true
+region_rect = Rect2(48.0098, 0, 15.9917, 16.0045)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sxijj")
