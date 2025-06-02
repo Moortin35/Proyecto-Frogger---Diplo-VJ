@@ -11,8 +11,9 @@ signal jugador_golpeado
 #variables a manipular para poder variar la cantidad y velocidad de los obstaculos
 @export var contador_obstaculos = 3
 @export var distancia_entre_obstaculos = 128
-@export var velocidad = 200
+@export var velocidad = -200
 @export var limite_movimiento_x = 304
+@export var spawn_from_right_side = false
 
 #inicializacion de arreglo de obstaculos
 var obstaculos = []
@@ -22,7 +23,10 @@ func _ready() -> void:
 		#Vamos a guardar nuestra escena de obstaculo(sprite, collision) en var obstaculo
 		var obstaculo = escena_obstaculo.instantiate()
 		#Generacion de obstaculos, desde el lim_mov y calculando su punto de partida en distancia * i
-		obstaculo.position = Vector2(-limite_movimiento_x + distancia_entre_obstaculos * i, 0)
+		if spawn_from_right_side:
+			obstaculo.position = Vector2(limite_movimiento_x + distancia_entre_obstaculos * i, 0)
+		else:
+			obstaculo.position = Vector2(-limite_movimiento_x + distancia_entre_obstaculos * i, 0)
 		#cuando los dos objetos entran colision, se llama a la funcion de los parentesis
 		obstaculo.area_entered.connect(on_jugador_entra_obstaculo)
 		#agrego las instancias de obstaculo creados al arreglo obstaculo
@@ -33,15 +37,24 @@ func _process(delta: float) -> void:
 	for obstaculo in obstaculos:
 		#calcula la nueva posición en X multiplicando la velocidad por el tiempo delta
 		#y sumándolo a la posición actual del obstáculo
-		var nueva_posicion_x = velocidad * delta + obstaculo.position.x
-		#Verifica si el obstáculo está cerca del límite de movimiento (con un margen de 10 píxeles)
-		if abs(nueva_posicion_x - limite_movimiento_x) < 10:
-			#Si está cerca del límite derecho, lo teletransporta al límite izquierdo
-			#(creando un efecto de bucle infinito)
-			obstaculo.position.x = -limite_movimiento_x
+		var nueva_posicion_x
+		if spawn_from_right_side:
+				nueva_posicion_x = velocidad * delta + obstaculo.position.x
+				if nueva_posicion_x < (-limite_movimiento_x):
+					obstaculo.position.x = limite_movimiento_x
+				else:
+					#Si no ha llegado al límite, actualiza su posición normalmente
+					obstaculo.position.x = nueva_posicion_x
 		else:
-			#Si no ha llegado al límite, actualiza su posición normalmente
-			obstaculo.position.x = nueva_posicion_x
+			nueva_posicion_x = velocidad * delta + obstaculo.position.x
+			#Verifica si el obstáculo está cerca del límite de movimiento (con un margen de 10 píxeles)
+			if abs(nueva_posicion_x - limite_movimiento_x) < 10:
+				#Si está cerca del límite derecho, lo teletransporta al límite izquierdo
+				#(creando un efecto de bucle infinito)
+				obstaculo.position.x = -limite_movimiento_x
+			else:
+				#Si no ha llegado al límite, actualiza su posición normalmente
+				obstaculo.position.x = nueva_posicion_x
 		
 func on_jugador_entra_obstaculo(area: Area2D):
 	print("[GOLPEO JUGADOR]")

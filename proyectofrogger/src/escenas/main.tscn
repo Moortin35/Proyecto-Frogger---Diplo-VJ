@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmhb3j1qiq08a"]
+[gd_scene load_steps=4 format=3 uid="uid://bmhb3j1qiq08a"]
 
 [ext_resource type="PackedScene" uid="uid://bu8dvswt1e6f1" path="res://src/escenas/mapa.tscn" id="1_bg8j1"]
 [ext_resource type="PackedScene" uid="uid://ddsybkjqpkpeq" path="res://src/escenas/jugador.tscn" id="2_blyxm"]
 [ext_resource type="PackedScene" uid="uid://diw3velfvip4s" path="res://src/escenas/linea_obstaculo.tscn" id="3_glrbf"]
-[ext_resource type="PackedScene" uid="uid://rsy25uuxk0fa" path="res://src/escenas/linea_obstaculo_opuesto.tscn" id="4_ehw1d"]
 
 [node name="main" type="Node"]
 
@@ -18,6 +17,12 @@ position = Vector2(152, 200)
 position = Vector2(0, 184)
 distancia_entre_obstaculos = 80
 velocidad = 120
+
+[node name="linea_obstaculo2" parent="spawner_obstaculo" instance=ExtResource("3_glrbf")]
+position = Vector2(0, 168)
+distancia_entre_obstaculos = 80
+velocidad = 120
+spawn_from_right_side = true
 
 [node name="linea_obstaculo3" parent="spawner_obstaculo" instance=ExtResource("3_glrbf")]
 position = Vector2(0, 136)
@@ -40,27 +45,3 @@ velocidad = 300
 position = Vector2(0, 24)
 contador_obstaculos = 8
 velocidad = 300
-
-[node name="spawner_obstaculo_opuesto" type="Node" parent="."]
-
-[node name="linea_obstaculo2" parent="spawner_obstaculo_opuesto" instance=ExtResource("4_ehw1d")]
-position = Vector2(0, 168)
-contador_obstaculos = 5
-distancia_entre_obstaculos = 64
-velocidad = -100
-
-[node name="linea_obstaculo4" parent="spawner_obstaculo_opuesto" instance=ExtResource("4_ehw1d")]
-position = Vector2(0, 120)
-distancia_entre_obstaculos = 80
-velocidad = -270
-
-[node name="linea_obstaculo6" parent="spawner_obstaculo_opuesto" instance=ExtResource("4_ehw1d")]
-position = Vector2(0, 72)
-contador_obstaculos = 6
-distancia_entre_obstaculos = 80
-velocidad = -80
-
-[node name="linea_obstaculo7" parent="spawner_obstaculo_opuesto" instance=ExtResource("4_ehw1d")]
-position = Vector2(0, 40)
-contador_obstaculos = 5
-distancia_entre_obstaculos = 96
