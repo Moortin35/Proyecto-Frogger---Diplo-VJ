@@ -1,12 +1,14 @@
 extends Node2D
+
 #Le doy nombre a mi nodo para referenciarlo o reconocerlo como un nodo objeto
 class_name  LineaObstaculo
+
 #creo una señal para que cuando ocurra un evento lo podamos controlar,
 #en este caso cuando hay contacto del objeto jugador con el obstaculo
 signal jugador_golpeado
 
-@onready var escena_obstaculo: PackedScene = preload("res://src/escenas/obstaculo.tscn")
 #creo un onready para que cuando carguemos el script, nos cargue nuestra escena del obstaculo.
+@onready var escena_obstaculo: PackedScene = preload("res://src/escenas/obstaculo.tscn")
 
 #variables a manipular para poder variar la cantidad y velocidad de los obstaculos
 @export var contador_obstaculos = 3
@@ -15,8 +17,8 @@ signal jugador_golpeado
 @export var limite_movimiento_x = 304
 @export var spawn_from_right_side = false
 
-#inicializacion de arreglo de obstaculos
 var obstaculos = []
+
 
 func _ready() -> void:
 	for i in contador_obstaculos:
@@ -32,6 +34,7 @@ func _ready() -> void:
 		#agrego las instancias de obstaculo creados al arreglo obstaculo
 		add_child(obstaculo)
 		obstaculos.append(obstaculo)
+		
 		
 func _process(delta: float) -> void:
 	for obstaculo in obstaculos:
@@ -55,6 +58,7 @@ func _process(delta: float) -> void:
 			else:
 				#Si no ha llegado al límite, actualiza su posición normalmente
 				obstaculo.position.x = nueva_posicion_x
+
 		
 func on_jugador_entra_obstaculo(area: Area2D):
 	print("[GOLPEO JUGADOR]")
