@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 	
 	#mueve suavemente (interpola) la posición actual hacia la nueva posición
 	position = lerp(position, nueva_posicion, velocidad * delta) 
-
+	
 	#si estamos muy cerca de la nueva posición (a menos de 0.1 píxeles)
 	if position.distance_to(nueva_posicion) < 0.1:
 		#ajustamos exactamente a la nueva posición
@@ -36,7 +36,6 @@ func _process(delta: float) -> void:
 		animated_sprite_2d.play("idle")
 
 
-		 
 #función que Godot ejecuta automáticamente cuando hay entrada del usuario
 func _input(event: InputEvent) -> void:
 	#si ya estamos moviéndonos hacia una nueva posición, ignoramos nuevas entradas
@@ -50,7 +49,7 @@ func _input(event: InputEvent) -> void:
 		#calculamos nueva posición sumando 16 píxeles hacia arriba
 		posicion_modificada = position + Vector2.UP * INCREMENTO_POSICION
 		animated_sprite_2d.play("moving")
-
+	
 	elif event.is_action_pressed("down"):
 		posicion_modificada = position + Vector2.DOWN * INCREMENTO_POSICION
 		animated_sprite_2d.play("moving")
@@ -73,7 +72,6 @@ func _input(event: InputEvent) -> void:
 		mover_jugador(posicion_modificada)
 
 
-		
 #función para mover al jugador a una nueva posición, asegurándose que no salga de la pantalla
 func mover_jugador(posicion_modificada: Vector2) -> void:
 	#margen de 8 píxeles para que el jugador no se salga completamente de la pantalla

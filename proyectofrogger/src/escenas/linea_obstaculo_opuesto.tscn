@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://rsy25uuxk0fa"]
-
-[ext_resource type="Script" uid="uid://da3mlarr0i5mt" path="res://src/scripts/linea_obstaculo_opuesto.gd" id="1_sqxyo"]
-
-[node name="linea_obstaculo_opuesto" type="Node2D"]
-script = ExtResource("1_sqxyo")
