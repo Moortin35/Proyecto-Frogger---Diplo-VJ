@@ -52,8 +52,8 @@ func _process(delta: float) -> void:
 			nueva_posicion_x = velocidad * delta + obstaculo.position.x
 			#Verifica si el obstáculo está cerca del límite de movimiento (con un margen de 10 píxeles)
 			if abs(nueva_posicion_x - limite_movimiento_x) < 10:
-				#Si está cerca del límite derecho, lo teletransporta al límite izquierdo
 				#(creando un efecto de bucle infinito)
+				#Si está cerca del límite derecho, lo teletransporta al límite izquierdo
 				obstaculo.position.x = -limite_movimiento_x
 			else:
 				#Si no ha llegado al límite, actualiza su posición normalmente

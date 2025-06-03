@@ -3,22 +3,41 @@ extends Area2D
 #le damos un nombre de clase a este script para poder referenciarlo desde otros lugares
 class_name Jugador
 
+signal vida_perdida
+
 #constante que define cuánto se moverá el jugador en cada paso (16 píxeles)
 const INCREMENTO_POSICION = 16
+#constante de posicion inicial del jugador
+const POSICION_INICIAL_JUGADOR = Vector2(152.0, 200.0)
+
+#referencia al componentes de jugador
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var timer: Timer = $Timer
 
 #variable que controla la velocidad de movimiento
 #(exportada para poder modificarla en el editor)
 @export var velocidad = 35
-
-#referencia al componente AnimatedSprite2D que está dentro de este nodo
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-
-@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@export var vidas = 3
 
 #variable para almacenar la posición a la que queremos mover al jugador
 var nueva_posicion: Vector2  = Vector2.ZERO
 
-
+func _ready() -> void:
+	timer.timeout.connect(on_timer_timeout)
+	
+func on_timer_timeout():
+	print("[PERDIO VIDA]")
+	vida_perdida.emit()
+	vidas -= 1
+	if vidas == 0:
+		set_process_input(false)
+		print("JUEGO TERMINADO", vidas)
+	else:
+		print("VIDAS RESTANTES: ", vidas)
+		resetear_jugador()
+	
+	
 #función que Godot ejecuta automáticamente en cada fotograma (delta es el tiempo entre fotogramas)
 func _process(delta: float) -> void:
 	#si no hay una nueva posición asignada, no hacemos nada
@@ -95,10 +114,20 @@ func mover_jugador(posicion_modificada: Vector2) -> void:
 	nueva_posicion = posicion_campleada
 
 func muere():
-	#en el primer momento o frame que tenga libre el jugador, que haga tal acción
-	#en este caso desactivo la colision
-	collision_shape_2d.set_deferred("disabled", true)
-	#cuando ocurré este evento cambia la animación
-	animated_sprite_2d.play("hit")
-	#al morir queda deshabilitado el input
-	set_process_input(false)
+	if vidas > 0:
+		#en el primer momento o frame que tenga libre el jugador, que haga tal acción
+		#en este caso desactivo la colision
+		collision_shape_2d.set_deferred("disabled", true)
+		#cuando ocurré este evento cambia la animación
+		animated_sprite_2d.play("hit")
+		#al morir queda deshabilitado el input
+		set_process_input(false)
+		timer.start()
+
+
+func resetear_jugador():
+	set_process_input(true)
+	collision_shape_2d.set_deferred("disabled", false)
+	animated_sprite_2d.play("idle")
+	global_position = POSICION_INICIAL_JUGADOR
+	nueva_posicion = POSICION_INICIAL_JUGADOR
