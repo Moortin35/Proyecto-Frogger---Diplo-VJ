@@ -58,7 +58,7 @@ func _process(delta: float) -> void:
 			else:
 				#Si no ha llegado al límite, actualiza su posición normalmente
 				obstaculo.position.x = nueva_posicion_x
-
+				
 
 func on_jugador_entra_obstaculo(area: Area2D):
 	print("[GOLPEO JUGADOR]")

@@ -13,6 +13,8 @@ const INCREMENTO_POSICION = 16
 #referencia al componente AnimatedSprite2D que está dentro de este nodo
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+
 #variable para almacenar la posición a la que queremos mover al jugador
 var nueva_posicion: Vector2  = Vector2.ZERO
 
@@ -91,3 +93,12 @@ func mover_jugador(posicion_modificada: Vector2) -> void:
 	)
 	#asignamos la posición limitada como nuestro nuevo destino	
 	nueva_posicion = posicion_campleada
+
+func muere():
+	#en el primer momento o frame que tenga libre el jugador, que haga tal acción
+	#en este caso desactivo la colision
+	collision_shape_2d.set_deferred("disabled", true)
+	#cuando ocurré este evento cambia la animación
+	animated_sprite_2d.play("hit")
+	#al morir queda deshabilitado el input
+	set_process_input(false)
