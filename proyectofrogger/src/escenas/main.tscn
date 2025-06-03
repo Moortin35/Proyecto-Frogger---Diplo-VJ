@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmhb3j1qiq08a"]
+[gd_scene load_steps=8 format=3 uid="uid://bmhb3j1qiq08a"]
 
 [ext_resource type="PackedScene" uid="uid://bu8dvswt1e6f1" path="res://src/escenas/mapa.tscn" id="1_bg8j1"]
 [ext_resource type="PackedScene" uid="uid://ddsybkjqpkpeq" path="res://src/escenas/jugador.tscn" id="2_blyxm"]
+[ext_resource type="PackedScene" uid="uid://bn2l35igab0kp" path="res://src/escenas/casa.tscn" id="2_kcqj4"]
+[ext_resource type="Script" uid="uid://5f0mwqnuvgns" path="res://src/scripts/casas_manager.gd" id="2_xmnem"]
 [ext_resource type="PackedScene" uid="uid://diw3velfvip4s" path="res://src/escenas/linea_obstaculo.tscn" id="3_glrbf"]
 [ext_resource type="Script" uid="uid://c63lwflni3a0w" path="res://src/scripts/spawner_obstaculo.gd" id="3_ug7w8"]
 [ext_resource type="Script" uid="uid://dohwbf0juli0a" path="res://src/scripts/game_state_manager.gd" id="4_ehw1d"]
@@ -9,6 +11,24 @@
 [node name="main" type="Node"]
 
 [node name="mapa" parent="." instance=ExtResource("1_bg8j1")]
+
+[node name="casas_manager" type="Node" parent="."]
+script = ExtResource("2_xmnem")
+
+[node name="casa" parent="casas_manager" instance=ExtResource("2_kcqj4")]
+position = Vector2(8, 8)
+
+[node name="casa2" parent="casas_manager" instance=ExtResource("2_kcqj4")]
+position = Vector2(72, 8)
+
+[node name="casa3" parent="casas_manager" instance=ExtResource("2_kcqj4")]
+position = Vector2(152, 8)
+
+[node name="casa4" parent="casas_manager" instance=ExtResource("2_kcqj4")]
+position = Vector2(216, 8)
+
+[node name="casa5" parent="casas_manager" instance=ExtResource("2_kcqj4")]
+position = Vector2(280, 8)
 
 [node name="jugador" parent="." instance=ExtResource("2_blyxm")]
 position = Vector2(152, 200)

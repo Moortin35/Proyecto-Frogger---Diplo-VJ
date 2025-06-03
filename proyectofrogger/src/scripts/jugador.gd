@@ -4,6 +4,7 @@ extends Area2D
 class_name Jugador
 
 signal vida_perdida
+signal game_over
 
 #constante que define cuánto se moverá el jugador en cada paso (16 píxeles)
 const INCREMENTO_POSICION = 16
@@ -33,6 +34,7 @@ func on_timer_timeout():
 	if vidas == 0:
 		set_process_input(false)
 		print("JUEGO TERMINADO", vidas)
+		game_over.emit()
 	else:
 		print("VIDAS RESTANTES: ", vidas)
 		resetear_jugador()
@@ -119,6 +121,7 @@ func muere():
 		#en este caso desactivo la colision
 		collision_shape_2d.set_deferred("disabled", true)
 		#cuando ocurré este evento cambia la animación
+		#animated_sprite_2d.self_modulate = Color(1,0,0)
 		animated_sprite_2d.play("hit")
 		#al morir queda deshabilitado el input
 		set_process_input(false)
