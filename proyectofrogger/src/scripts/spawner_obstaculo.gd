@@ -12,4 +12,3 @@ func _ready() -> void:
 
 func on_jugador_colisiona():
 	game_state_manager.matar_jugador()
-		 

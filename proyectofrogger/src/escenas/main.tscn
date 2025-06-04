@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmhb3j1qiq08a"]
+[gd_scene load_steps=9 format=3 uid="uid://bmhb3j1qiq08a"]
 
 [ext_resource type="PackedScene" uid="uid://bu8dvswt1e6f1" path="res://src/escenas/mapa.tscn" id="1_bg8j1"]
 [ext_resource type="PackedScene" uid="uid://ddsybkjqpkpeq" path="res://src/escenas/jugador.tscn" id="2_blyxm"]
@@ -7,10 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://diw3velfvip4s" path="res://src/escenas/linea_obstaculo.tscn" id="3_glrbf"]
 [ext_resource type="Script" uid="uid://c63lwflni3a0w" path="res://src/scripts/spawner_obstaculo.gd" id="3_ug7w8"]
 [ext_resource type="Script" uid="uid://dohwbf0juli0a" path="res://src/scripts/game_state_manager.gd" id="4_ehw1d"]
+[ext_resource type="PackedScene" uid="uid://q1bftbj1h6id" path="res://src/escenas/hud.tscn" id="8_nxjfm"]
 
 [node name="main" type="Node"]
 
 [node name="mapa" parent="." instance=ExtResource("1_bg8j1")]
+
+[node name="jugador" parent="." instance=ExtResource("2_blyxm")]
+position = Vector2(152, 200)
 
 [node name="casas_manager" type="Node" parent="."]
 script = ExtResource("2_xmnem")
@@ -29,9 +33,6 @@ position = Vector2(216, 8)
 
 [node name="casa5" parent="casas_manager" instance=ExtResource("2_kcqj4")]
 position = Vector2(280, 8)
-
-[node name="jugador" parent="." instance=ExtResource("2_blyxm")]
-position = Vector2(152, 200)
 
 [node name="spawner_obstaculo" type="Node" parent="."]
 script = ExtResource("3_ug7w8")
@@ -68,7 +69,9 @@ velocidad = 300
 [node name="linea_obstaculo9" parent="spawner_obstaculo" instance=ExtResource("3_glrbf")]
 position = Vector2(0, 24)
 contador_obstaculos = 8
-velocidad = 300
+velocidad = 270
+
+[node name="hud" parent="." instance=ExtResource("8_nxjfm")]
 
 [node name="game_state_manager" type="Node" parent="."]
 script = ExtResource("4_ehw1d")
