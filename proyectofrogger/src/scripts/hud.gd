@@ -22,11 +22,11 @@ func crear_vidas(cantidad_vidas: int):
 		texturas_vidas.append(texture_rect)
 
 func mostrar_perder():
-	resultado.text = "PERDISTE, te quedaste sin vidas :("
+	resultado.text = "PERDISTE, te desmayaste en la nieve"
 	center_container.show()
 	
 func mostrar_ganar():
-	resultado.text = "GANASTE, pudiste armar el trineo :)"
+	resultado.text = "GANASTE, rescataste a las calico"
 	center_container.show()
 
 
