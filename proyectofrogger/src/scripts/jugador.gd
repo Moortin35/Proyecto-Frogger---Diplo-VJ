@@ -80,13 +80,13 @@ func _input(event: InputEvent) -> void:
 	elif event.is_action_pressed("left"):
 		posicion_modificada = position + Vector2.LEFT * INCREMENTO_POSICION
 		#volteamos el sprite horizontalmente (para que mire a la izquierda)
-		animated_sprite_2d.set_flip_h(true)
+		animated_sprite_2d.set_flip_h(false)
 		animated_sprite_2d.play("moving")
 		
 	elif event.is_action_pressed("right"):
 		posicion_modificada = position + Vector2.RIGHT * INCREMENTO_POSICION
 		#aseguramos que el sprite no esté volteado (mire a la derecha)
-		animated_sprite_2d.set_flip_h(false)
+		animated_sprite_2d.set_flip_h(true)
 		animated_sprite_2d.play("moving")
 		
 	#si se calculó una nueva posición modificada (por alguna tecla presionada)

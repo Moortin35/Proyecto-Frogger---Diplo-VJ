@@ -8,8 +8,7 @@ class_name Hud
 @onready var panel_container: PanelContainer = %PanelContainer
 @onready var resultado: Label = %resultado
 
-
-var texture_vida = preload("res://_assets/heart.png")
+var texture_vida = preload("res://_assets/muñeco.png")
 var texturas_vidas: Array[TextureRect] = []
 
 func crear_vidas(cantidad_vidas: int):
