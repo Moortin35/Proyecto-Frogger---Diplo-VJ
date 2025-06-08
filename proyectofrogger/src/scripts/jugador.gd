@@ -98,13 +98,13 @@ func _input(event: InputEvent) -> void:
 #función para mover al jugador a una nueva posición, asegurándose que no salga de la pantalla
 func mover_jugador(posicion_modificada: Vector2) -> void:
 	#margen de 8 píxeles para que el jugador no se salga completamente de la pantalla
-	var tile_offset = 24
+	var tile_offset = 8
 	#obtenemos el tamaño de la pantalla/pantalla de juego
 	var viewport_size = get_viewport_rect().size
 	#calculamos los límites donde puede moverse el jugador:
 	var min_x = tile_offset #límite izquierdo
 	var max_x = viewport_size.x - tile_offset #límite derecho
-	var min_y = tile_offset #límite superior
+	var min_y = tile_offset + 16 #límite superior
 	var max_y = viewport_size.y - tile_offset #límite inferior
 	
 	#aseguramos que la nueva posición esté dentro de los límites calculados
@@ -122,9 +122,9 @@ func muere():
 		collision_shape_2d.set_deferred("disabled", true)
 		#cuando ocurré este evento cambia la animación
 		#animated_sprite_2d.self_modulate = Color(1,0,0)
-		animated_sprite_2d.play("hit")
 		#al morir queda deshabilitado el input
 		set_process_input(false)
+		animated_sprite_2d.play("hit")
 		timer.start()
 
 
