@@ -20,7 +20,7 @@ position = Vector2(152, 200)
 script = ExtResource("2_xmnem")
 
 [node name="casa" parent="casas_manager" instance=ExtResource("2_kcqj4")]
-position = Vector2(120, 8)
+position = Vector2(120, 24)
 
 [node name="casa2" parent="casas_manager" instance=ExtResource("2_kcqj4")]
 position = Vector2(56, 72)
@@ -32,7 +32,7 @@ position = Vector2(56, 152)
 position = Vector2(200, 120)
 
 [node name="casa5" parent="casas_manager" instance=ExtResource("2_kcqj4")]
-position = Vector2(264, 8)
+position = Vector2(264, 24)
 
 [node name="spawner_obstaculo" type="Node" parent="."]
 script = ExtResource("3_ug7w8")

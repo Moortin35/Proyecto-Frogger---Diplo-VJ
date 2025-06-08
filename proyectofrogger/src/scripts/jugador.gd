@@ -98,7 +98,7 @@ func _input(event: InputEvent) -> void:
 #función para mover al jugador a una nueva posición, asegurándose que no salga de la pantalla
 func mover_jugador(posicion_modificada: Vector2) -> void:
 	#margen de 8 píxeles para que el jugador no se salga completamente de la pantalla
-	var tile_offset = 8
+	var tile_offset = 24
 	#obtenemos el tamaño de la pantalla/pantalla de juego
 	var viewport_size = get_viewport_rect().size
 	#calculamos los límites donde puede moverse el jugador:
