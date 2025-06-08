@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6veirxhsakd8"
-path="res://.godot/imported/tiles_nieve_hielo.png-b83f4c9dff431080157fbb77c7b5ff3d.ctex"
+uid="uid://bwbr8wo3y5ntr"
+path="res://.godot/imported/tileset_terreno.png-17a13a731bba8bf9304c91851ebd6a3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/tiles_nieve_hielo.png"
-dest_files=["res://.godot/imported/tiles_nieve_hielo.png-b83f4c9dff431080157fbb77c7b5ff3d.ctex"]
+source_file="res://_assets/tileset_terreno.png"
+dest_files=["res://.godot/imported/tileset_terreno.png-17a13a731bba8bf9304c91851ebd6a3f.ctex"]
 
 [params]
 

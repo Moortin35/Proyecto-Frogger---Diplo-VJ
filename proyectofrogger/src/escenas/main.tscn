@@ -61,7 +61,7 @@ distancia_entre_obstaculos = 192
 
 [node name="linea_obstaculo5" parent="spawner_obstaculo" instance=ExtResource("3_glrbf")]
 position = Vector2(0, 88)
-contador_obstaculos = 6
+contador_obstaculos = 5
 distancia_entre_obstaculos = 16
 velocidad = 300
 

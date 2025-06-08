@@ -1,23 +1,6 @@
-[gd_scene load_steps=8 format=4 uid="uid://bu8dvswt1e6f1"]
+[gd_scene load_steps=4 format=4 uid="uid://bu8dvswt1e6f1"]
 
-[ext_resource type="Texture2D" uid="uid://thrsa8v2s3kx" path="res://_assets/tileset_map.png" id="1_p21c5"]
-[ext_resource type="Texture2D" uid="uid://bwbr8wo3y5ntr" path="res://_assets/tileset_terreno2.png" id="2_kxecg"]
-[ext_resource type="Texture2D" uid="uid://c6veirxhsakd8" path="res://_assets/tiles_nieve_hielo.png" id="2_nulfw"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nulfw"]
-texture = ExtResource("1_p21c5")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
+[ext_resource type="Texture2D" uid="uid://bwbr8wo3y5ntr" path="res://_assets/tileset_terreno.png" id="2_kxecg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nttpt"]
 texture = ExtResource("2_kxecg")
@@ -32,21 +15,7 @@ texture = ExtResource("2_kxecg")
 3:1/0 = 0
 4:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxecg"]
-texture = ExtResource("2_nulfw")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-
 [sub_resource type="TileSet" id="TileSet_kxecg"]
-sources/3 = SubResource("TileSetAtlasSource_kxecg")
-sources/0 = SubResource("TileSetAtlasSource_nulfw")
 sources/1 = SubResource("TileSetAtlasSource_nttpt")
 
 [node name="mapa" type="Node2D"]
