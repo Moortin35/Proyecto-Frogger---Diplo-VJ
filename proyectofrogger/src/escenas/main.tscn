@@ -57,7 +57,6 @@ velocidad = 250
 
 [node name="linea_obstaculo4" parent="spawner_obstaculo" instance=ExtResource("3_glrbf")]
 position = Vector2(0, 104)
-contador_obstaculos = 5
 distancia_entre_obstaculos = 192
 
 [node name="linea_obstaculo5" parent="spawner_obstaculo" instance=ExtResource("3_glrbf")]
@@ -75,8 +74,8 @@ spawn_por_derecha = true
 
 [node name="linea_obstaculo7" parent="spawner_obstaculo" instance=ExtResource("3_glrbf")]
 position = Vector2(0, 40)
-contador_obstaculos = 5
-distancia_entre_obstaculos = 180
+contador_obstaculos = 4
+distancia_entre_obstaculos = 120
 velocidad = 250
 
 [node name="hud" parent="." instance=ExtResource("8_nxjfm")]

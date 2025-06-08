@@ -11,6 +11,9 @@ const INCREMENTO_POSICION = 16
 #constante de posicion inicial del jugador
 const POSICION_INICIAL_JUGADOR = Vector2(152.0, 200.0)
 
+#variable para corregir la animacion de perder vida
+var perdio_vida = false 
+
 #referencia al componentes de jugador
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
@@ -50,7 +53,7 @@ func _process(delta: float) -> void:
 	position = lerp(position, nueva_posicion, velocidad * delta) 
 	
 	#si estamos muy cerca de la nueva posición (a menos de 0.1 píxeles)
-	if position.distance_to(nueva_posicion) < 0.1:
+	if position.distance_to(nueva_posicion) < 0.1 and !perdio_vida:
 		#ajustamos exactamente a la nueva posición
 		position = nueva_posicion
 		#reseteamos la nueva posición a ZERO (indicando que ya llegamos)
@@ -122,6 +125,7 @@ func muere():
 		collision_shape_2d.set_deferred("disabled", true)
 		#cuando ocurré este evento cambia la animación
 		#animated_sprite_2d.self_modulate = Color(1,0,0)
+		perdio_vida = true
 		#al morir queda deshabilitado el input
 		set_process_input(false)
 		animated_sprite_2d.play("hit")
@@ -131,6 +135,7 @@ func muere():
 func resetear_jugador():
 	set_process_input(true)
 	collision_shape_2d.set_deferred("disabled", false)
+	perdio_vida = false
 	animated_sprite_2d.play("idle")
 	global_position = POSICION_INICIAL_JUGADOR
 	nueva_posicion = POSICION_INICIAL_JUGADOR

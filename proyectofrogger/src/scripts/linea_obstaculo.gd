@@ -19,7 +19,6 @@ signal jugador_golpeado
 
 var obstaculos = []
 
-
 func _ready() -> void:
 	for i in contador_obstaculos:
 		#Vamos a guardar nuestra escena de obstaculo(sprite, collision) en var obstaculo
