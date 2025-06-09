@@ -26,7 +26,7 @@ Algunos cambios se realizaron en comparación a la implementación original, si 
 * Tile set nuevo con temática de nieve.
 * En vez de ser casas que se visitan y se llenan con un objeto, aquí tomaremos el gato("casa") y este desaparecerá dando por entender que se obtuvo o se completó la obtención del mismo, mostrando los faltantes en el mapa.
 * Algunos cambios menores en cuanto a valores de variables en comparación a la implementación de las clases.
-* Un poquito de libertad creativa a la hora de representar el mapa, en vez de representar caminos, busque que ase asemeje al patio de una casa.
+* Un poquito de libertad creativa a la hora de representar el mapa, en vez de representar caminos, busqué que se asemeje al patio de una casa.
 * Puede que haya algún que otro cambio que me esté pasando por alto, si me acuerdo aparecerá, _sepa disculpar. (?_
 
 ## Futuras Ideas
