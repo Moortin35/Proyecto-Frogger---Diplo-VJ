@@ -38,3 +38,4 @@ Algunas ideas quedaron en el camino y no tuve tiempo a implementarlas a la hora 
 * Menú previo a jugar y contando brevemente "la historia o premisa"
 * Un breve texto al lado de los muñecos de nieve que diga: "Vidas restantes".
 * Alguna música simple y en loop con temática invernal.
+* Comentar bien el código y corregir los nombres de algunas variables si llego a encontrar que haga falta.
