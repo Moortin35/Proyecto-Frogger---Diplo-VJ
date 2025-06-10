@@ -25,7 +25,6 @@ Algunos cambios se realizaron en comparación a la implementación original, si 
 * Los bordes hasta donde puede moverse el jugador fue limitado en el alto de pantalla(eje y), para dejar un marco de 16 píxeles para la interfaz de vidas.
 * Tile set nuevo con temática de nieve.
 * En vez de ser casas que se visitan y se llenan con un objeto, aquí tomaremos el gato("casa") y este desaparecerá dando por entender que se obtuvo o se completó la obtención del mismo, mostrando los faltantes en el mapa.
-* Algunos cambios menores en cuanto a valores de variables en comparación a la implementación de las clases.
 * Un poquito de libertad creativa a la hora de representar el mapa, en vez de representar caminos, busqué que se asemeje al patio de una casa.
 * Se agrego música simple y en loop con temática invernal. Y un efecto de sonido de obtención del gato.
 * Se agrego un breve texto al lado de los muñecos de nieve que diga: "Vidas restantes".
@@ -45,3 +44,4 @@ Algunas ideas quedaron en el camino y no tuve tiempo a implementarlas a la hora 
 * Asset de marco para los bordes de mapa.
 * Menú previo a jugar y contando brevemente "la historia o premisa"
 * Comentar bien el código y corregir los nombres de algunas variables si llego a encontrar que haga falta.
+* Implementar un objeto muñeco de nieve que al tomarlo se agregue una vida extra, también con spawn aleatorio.
