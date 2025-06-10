@@ -28,11 +28,13 @@ Algunos cambios se realizaron en comparación a la implementación original, si 
 * Algunos cambios menores en cuanto a valores de variables en comparación a la implementación de las clases.
 * Un poquito de libertad creativa a la hora de representar el mapa, en vez de representar caminos, busqué que se asemeje al patio de una casa.
 * Se agrego música simple y en loop con temática invernal. Y un efecto de sonido de obtención del gato.
+* Se agrego un breve texto al lado de los muñecos de nieve que diga: "Vidas restantes".
 * Puede que haya algún que otro cambio que me esté pasando por alto, si me acuerdo aparecerá, _sepa disculpar. (?_
 
 ## Creditos Adicionales
 
 Música: [Windchill](https://opengameart.org/content/windchill) de [genderfreak](https://genderfreak.itch.io/)
+Fuentes de Texto: [Pixelify Sans](https://fonts.google.com/share?selection.family=Pixelify+Sans:wght@400..700) de [Google Fonts](https://fonts.google.com/)
 
 ## Futuras Ideas
 
@@ -41,5 +43,4 @@ Algunas ideas quedaron en el camino y no tuve tiempo a implementarlas a la hora 
 * Spawn aleatorio de los gatos, en un principio aparecería uno solo en algún punto aleatorio del mapa
 * Asset de marco para los bordes de mapa.
 * Menú previo a jugar y contando brevemente "la historia o premisa"
-* Un breve texto al lado de los muñecos de nieve que diga: "Vidas restantes".
 * Comentar bien el código y corregir los nombres de algunas variables si llego a encontrar que haga falta.
