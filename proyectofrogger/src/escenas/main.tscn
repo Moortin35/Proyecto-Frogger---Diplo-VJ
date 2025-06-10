@@ -16,6 +16,7 @@
 
 [node name="jugador" parent="." instance=ExtResource("2_blyxm")]
 position = Vector2(152, 200)
+vidas = 5
 
 [node name="casas_manager" type="Node" parent="."]
 script = ExtResource("2_xmnem")
