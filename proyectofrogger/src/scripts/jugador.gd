@@ -18,6 +18,7 @@ var perdio_vida = false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var timer: Timer = $Timer
+@onready var hit_sound_effect: AudioStreamPlayer = $hit_sound_effect
 
 #variable que controla la velocidad de movimiento
 #(exportada para poder modificarla en el editor)
@@ -128,6 +129,7 @@ func muere():
 		perdio_vida = true
 		#al morir queda deshabilitado el input
 		set_process_input(false)
+		hit_sound_effect.play()
 		animated_sprite_2d.play("hit")
 		timer.start()
 
