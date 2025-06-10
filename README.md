@@ -33,8 +33,9 @@ Algunos cambios se realizaron en comparación a la implementación original, si 
 
 ## Creditos Adicionales
 
-Música: [Windchill](https://opengameart.org/content/windchill) de [genderfreak](https://genderfreak.itch.io/)
-Fuentes de Texto: [Pixelify Sans](https://fonts.google.com/share?selection.family=Pixelify+Sans:wght@400..700) de [Google Fonts](https://fonts.google.com/)
+* Música: [Windchill](https://opengameart.org/content/windchill) de [genderfreak](https://genderfreak.itch.io/)
+
+* Fuentes de Texto: [Pixelify Sans](https://fonts.google.com/share?selection.family=Pixelify+Sans:wght@400..700) de [Google Fonts](https://fonts.google.com/)
 
 ## Futuras Ideas
 
