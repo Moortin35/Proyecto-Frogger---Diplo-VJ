@@ -33,8 +33,6 @@ Algunos cambios se realizaron en comparación a la implementación original, si 
 ## Creditos Adicionales
 
 Música: [Windchill](https://opengameart.org/content/windchill) de [genderfreak](https://genderfreak.itch.io/)
- 
-music by 
 
 ## Futuras Ideas
 
