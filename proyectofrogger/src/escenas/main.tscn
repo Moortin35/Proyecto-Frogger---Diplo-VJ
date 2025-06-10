@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmhb3j1qiq08a"]
+[gd_scene load_steps=10 format=3 uid="uid://bmhb3j1qiq08a"]
 
 [ext_resource type="PackedScene" uid="uid://bu8dvswt1e6f1" path="res://src/escenas/mapa.tscn" id="1_bg8j1"]
 [ext_resource type="PackedScene" uid="uid://ddsybkjqpkpeq" path="res://src/escenas/jugador.tscn" id="2_blyxm"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://c63lwflni3a0w" path="res://src/scripts/spawner_obstaculo.gd" id="3_ug7w8"]
 [ext_resource type="Script" uid="uid://dohwbf0juli0a" path="res://src/scripts/game_state_manager.gd" id="4_ehw1d"]
 [ext_resource type="PackedScene" uid="uid://q1bftbj1h6id" path="res://src/escenas/hud.tscn" id="8_nxjfm"]
+[ext_resource type="AudioStream" uid="uid://dfe7ng2suoe8t" path="res://_assets_sounds/windchill.wav" id="9_ll7ea"]
 
 [node name="main" type="Node"]
 
@@ -82,3 +83,8 @@ velocidad = 250
 
 [node name="game_state_manager" type="Node" parent="."]
 script = ExtResource("4_ehw1d")
+
+[node name="música_principal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ll7ea")
+volume_db = -4.0
+autoplay = true

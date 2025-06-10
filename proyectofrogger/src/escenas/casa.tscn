@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bn2l35igab0kp"]
+[gd_scene load_steps=8 format=3 uid="uid://bn2l35igab0kp"]
 
 [ext_resource type="Script" uid="uid://7a4kv2n0jqo7" path="res://src/scripts/casa.gd" id="1_6csdj"]
 [ext_resource type="Texture2D" uid="uid://l5pkm0rfvld2" path="res://_assets/luna.png" id="2_6csdj"]
+[ext_resource type="AudioStream" uid="uid://c21flslilprfi" path="res://_assets_sounds/mggaow.wav" id="3_yik07"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yik07"]
 atlas = ExtResource("2_6csdj")
@@ -37,5 +38,9 @@ frame_progress = 0.831893
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_6csdj")
+
+[node name="efecto_sonido_luna" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yik07")
+volume_db = -4.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

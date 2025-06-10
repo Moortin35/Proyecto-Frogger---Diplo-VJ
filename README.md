@@ -27,7 +27,15 @@ Algunos cambios se realizaron en comparación a la implementación original, si 
 * En vez de ser casas que se visitan y se llenan con un objeto, aquí tomaremos el gato("casa") y este desaparecerá dando por entender que se obtuvo o se completó la obtención del mismo, mostrando los faltantes en el mapa.
 * Algunos cambios menores en cuanto a valores de variables en comparación a la implementación de las clases.
 * Un poquito de libertad creativa a la hora de representar el mapa, en vez de representar caminos, busqué que se asemeje al patio de una casa.
+* Se agrego música simple y en loop con temática invernal. Y un efecto de sonido de obtención del gato.
 * Puede que haya algún que otro cambio que me esté pasando por alto, si me acuerdo aparecerá, _sepa disculpar. (?_
+
+## Creditos Adicionales
+
+Música: Windchill - genderfreak
+
+Copyright/Attribution Notice: 
+music by https://genderfreak.itch.io/ or https://opengameart.org/users/genderfreak
 
 ## Futuras Ideas
 
@@ -37,5 +45,4 @@ Algunas ideas quedaron en el camino y no tuve tiempo a implementarlas a la hora 
 * Asset de marco para los bordes de mapa.
 * Menú previo a jugar y contando brevemente "la historia o premisa"
 * Un breve texto al lado de los muñecos de nieve que diga: "Vidas restantes".
-* Alguna música simple y en loop con temática invernal.
 * Comentar bien el código y corregir los nombres de algunas variables si llego a encontrar que haga falta.
