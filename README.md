@@ -32,10 +32,9 @@ Algunos cambios se realizaron en comparación a la implementación original, si 
 
 ## Creditos Adicionales
 
-Música: Windchill - genderfreak
-
-Copyright/Attribution Notice: 
-music by https://genderfreak.itch.io/ or https://opengameart.org/users/genderfreak
+Música: [Windchill](https://opengameart.org/content/windchill) de [genderfreak](https://genderfreak.itch.io/)
+ 
+music by 
 
 ## Futuras Ideas
 
