@@ -36,6 +36,8 @@ Algunos cambios se realizaron en comparación a la implementación original, si 
 
 * Fuentes de Texto: [Pixelify Sans](https://fonts.google.com/share?selection.family=Pixelify+Sans:wght@400..700) de [Google Fonts](https://fonts.google.com/)
 
+* Efecto de Sonido: [Player Hit](https://opengameart.org/content/player-hit-damage) de GreyFrogGames
+
 ## Futuras Ideas
 
 Algunas ideas quedaron en el camino y no tuve tiempo a implementarlas a la hora de la entrega debido a que estoy un poco ajustado de tiempo y con parciales. 
