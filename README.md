@@ -13,7 +13,7 @@ El proyecto se hizo siguiendo la guía proporcionada por la cátedra y siguiendo
 ## Temática
 
 La idea de la temática nació basándose en mi ciudad natal y su invierno cargado de bastante nieve. 
-La protagonista en Valentina, ella volvió en vacaciones de invierno a su casa y a la par sus sobrinos están de visitas. A Valen le gustan los gatos calicos y tiene varios en su casa. 
+La protagonista es Valentina, ella volvió en vacaciones de invierno a su casa y a la par sus sobrinos están de visitas. A Valen le gustan los gatos calicos y tiene varios en su casa. 
 Una tarde los sobrinos de Valen se pusieron a jugar a la guerra de bolas de nieve en su patio, sus gatos se escaparon y Valen quiere volver a entrarlos a la casa.
 
 ## Cambios
